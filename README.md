@@ -1,64 +1,40 @@
-# Optika — Landingpage (Static Website)
+// Aufgabenstellung an Codex (Beispiel)
 
-Build a modern, premium, responsive landing page for a brand called **Optika** (optics / eyewear / eye-care).
-This repo should become a ready-to-deploy static website.
+Erstelle eine professionelle, responsive Webseite für einen Optiker mit drei Seiten (Startseite, Leistungen, Über uns & Kontakt).  Sie soll klar strukturiert, modern und zugänglich sein und die Alleinstellungsmerkmale des Optikers (Nachhaltigkeit, Regionalität, persönliche Zeit für Kunden) hervorheben.  Die Seite wird in deutscher Sprache erstellt und erfüllt die DSGVO‑ und Impressumspflichten.
 
-## Goals
-- Premium, clean, minimal design (Apple-like simplicity)
-- Fast loading, accessible, responsive
-- Clear conversion: "Termin buchen" / "Beratung anfragen"
-- SEO-friendly structure and metadata
+1. **Layout & Stil**
+   • Verwende HTML5‑Semantik (header/nav/main/footer) und gut lesbare, moderne Schriftarten (z. B. „Open Sans“).  Die Grundfarben sind Weiß bzw. Hellgrau; Akzentfarbe ist Türkis (#007e9f) für Buttons und Links.  Lege CSS‑Variablen für Farben an.
+   • Alle Bilder müssen responsive sein und sinnvolle `alt`‑Texte haben, die die Situation beschreiben (z. B. „Person mit Brille liest ein Buch“), ohne eine reale Person zu identifizieren.
+   • Das Menü enthält Links zu allen drei Seiten und einen hervorgehobenen Button „Termin buchen“.  Auf mobilen Geräten verwandelt sich das Menü in ein Burger‑Menü.
 
-## Pages
-- **/ (Landingpage)** — single page for now
+2. **Startseite**
+   • Hero‑Bereich mit großem Hintergrundbild (Menschen mit modischen Brillen), Überschrift („Mehr als eine Brille – wir kümmern uns um Ihr gutes Sehen“) und Untertitel, der Nachhaltigkeit und persönliche Beratung betont; darunter ein Button „Jetzt Wunschtermin sichern“, der zum Terminformular führt.
+   • Bereich „Unsere Leistungen“ mit vier Karten: „Sehtest & Augenprüfung“, „Brillenberatung & Fassungswahl“, „Kontaktlinsen & Pflegemittel“ und „Reparatur & Service“.  Jede Karte zeigt ein Icon, eine kurze Beschreibung und einen Link zur Leistungs‑Seite.  Dies spiegelt die strukturierte Darstellung des Leistungsspektrums wider [oai_citation:47‡sorglos.online](https://www.sorglos.online/de/branche/optiker_webseiten/#:~:text=1).
+   • Abschnitt „Unsere Werte“ mit drei Spalten: Nachhaltigkeit (Brillen aus Deutschland/Österreich/Schweiz und recyceltes Zubehör [oai_citation:48‡diebrillenfreunde.de](https://www.diebrillenfreunde.de/#:~:text=Dein%20Optiker%20f%C3%BCr%20Die%20nachhaltige,und%20regionale%20Brille)), Regionalität (lokale Produktion, kurze Lieferwege [oai_citation:49‡diebrillenfreunde.de](https://www.diebrillenfreunde.de/#:~:text=Als%20Hamburger%20Optiker%20legen%20wir,st%C3%A4rken%20auch%20die%20lokale%20Wirtschaft)) und Zeit (individuelle Beratung ohne Hektik [oai_citation:50‡diebrillenfreunde.de](https://www.diebrillenfreunde.de/#:~:text=,Optiker%20in%20Hamburg%2C%20der%20zuh%C3%B6rt)).
+   • Teamvorstellung mit runden Fotos, Namen, Funktionen und kurzem Text zur Qualifikation (Meistertitel, Optometrist/in).  Ein Link führt zur ausführlichen Teamseite unter „Über uns“.
+   • Kundenbewertungen/Testimonials mit zwei bis drei kurzen Zitaten.  Optional: Aktionsbereich mit aktuellen Angeboten, Rabattaktionen oder Hinweisen auf neue Kollektionen.
+   • Footer mit Kontaktinformationen, Öffnungszeiten, Social‑Media‑Links, Impressum‑ und Datenschutz‑Links sowie Cookie‑Banner.
 
-## Sections (Landingpage)
-1. Top navigation (logo, links, primary CTA button)
-2. Hero section:
-   - Headline: premium optics / eyewear
-   - Subheadline: short value proposition
-   - CTAs: "Termin buchen" (primary), "Kollektion ansehen" (secondary)
-3. Trust bar (e.g., "4.9★ Bewertungen", "Kostenloser Sehtest", "Premium-Gläser")
-4. Services / Benefits (3–6 cards)
-5. Featured collection (3 product cards, placeholder images)
-6. “So läuft’s ab” (3 steps)
-7. Testimonials (2–3 quotes)
-8. Pricing teaser (2 tiers: Basic / Premium) OR “Leistungen ab …”
-9. FAQ (accordion or simple list)
-10. Contact section with form (name, email, message) + business info
-11. Footer (links, social placeholders, legal placeholders)
+3. **Leistungen‑Seite**
+   • Einleitender Abschnitt über die Bedeutung von gutem Sehen und die Belastung durch digitale Geräte [oai_citation:51‡optik-volz.de](https://optik-volz.de/#:~:text=Ihre%20Augen%20liegen%20uns%20am,Herzen).  Erwähne, dass das Unternehmen modernste Technik nutzt und das Team regelmäßig geschult wird [oai_citation:52‡optik-volz.de](https://optik-volz.de/#:~:text=Kontinuierliche%20Weiterbildung%20unserer%20Mitarbeiter%2C%20der,u%CC%88berregional%20einen%20ausgezeichneten%20Ruf%20erworben).
+   • Detaillierte Unterabschnitte:
+     – **Sehtest & Augenprüfung:** Erkläre verschiedene Testarten (Standard‑Sehtest, Führerschein‑Sehtest, Gesundheitscheck) und die verwendeten Geräte (3D‑Scanner), betone die präzise Messung und den augenärztlichen Befund [oai_citation:53‡optik-volz.de](https://optik-volz.de/#:~:text=an%20Brillenmodellen%20fu%CC%88r%20jeden%20Geschmack,Zus%C3%A4tzliche%20Leistungen%20wie%20zum).
+     – **Brillenberatung & Fassungswahl:** Beschreibe die Auswahl an Brillen für Damen, Herren und Kinder – von Lese- über Gleitsicht‑ bis zu Sport- und Sonnenbrillen [oai_citation:54‡optik-volz.de](https://optik-volz.de/#:~:text=Unsere%20Brillen).  Betone, dass eine sorgfältig ausgesuchte Brille die Persönlichkeit unterstreicht [oai_citation:55‡optik-volz.de](https://optik-volz.de/#:~:text=Ob%20eine%20Hornbrille%2C%20eine%20Lesebrille%2C,garantiert%20fu%CC%88r%20jeden%20das%20Richtige).
+     – **Kontaktlinsen & Pflegemittel:** Beschreibe verschiedene Linsenarten (Tages‑/Wochen‑/Monatslinsen, multifokale Linsen), die Anpassung und Beratung [oai_citation:56‡fielmann.de](https://www.fielmann.de/service/termin-buchen/#:~:text=) und weise auf Pflegemittel und Abo‑Optionen hin [oai_citation:57‡glasson.app](https://www.glasson.app/de/blog/wie-optiker-ihre-online-prasenz-maximieren-konnen-tipps-fur-soziale-medien-und-websites/#:~:text=Warum%20eine%20Online,wichtig%20ist).
+     – **Reparatur & Service:** Erläutere Anpassungen, Reparaturen, Brillenreinigung und Garantieleistungen; betone, dass auch nach dem Kauf Betreuung stattfindet [oai_citation:58‡optik-volz.de](https://optik-volz.de/#:~:text=Auch%20nach%20dem%20Kauf%20Ihrer,Optik%20Volz%20in%20besten%20H%C3%A4nden).
+     – **Spezialleistungen & Technologien:** Stelle besondere Angebote wie 3D‑Sehtest oder DNEye‑Scanner [oai_citation:59‡optik-volz.de](https://optik-volz.de/#:~:text=Optik%20Volz%20,in%20Heidelberg%20und%20Kornwestheim) vor.
+   • FAQ‑Bereich mit häufig gestellten Fragen (z. B. „Kratzer auf Brillengläsern entfernen?“ [oai_citation:60‡diebrillenfreunde.de](https://www.diebrillenfreunde.de/#:~:text=%3A%20%3BKann%20man%20Kratzer%20aus,Brillengl%C3%A4sern%20entfernen)).  Jede Frage ist ein `<details>`‑Element mit `<summary>`.
+   • Am Ende der Seite ein gut sichtbarer Button „Termin buchen“ mit Hinweis auf Terminbestätigung und Erinnerungsservice [oai_citation:61‡fielmann.de](https://www.fielmann.de/service/termin-buchen/#:~:text=Nach%20der%20Buchung%20bekommst%20du,allen%20Details%20zu%20deinem%20Termin).
 
-## Branding / Style
-- Name: Optika
-- Tone: modern, confident, short sentences, German copy
-- Visual style:
-  - Light background with subtle gradients
-  - Dark text, high contrast
-  - Rounded corners, soft shadows, thin borders
-  - Use CSS variables for colors and spacing
-- Typography:
-  - system-ui stack (no external fonts required)
+4. **Über‑uns‑/Kontakt‑Seite**
+   • Erzähle die Geschichte und Philosophie des Unternehmens: wann gegründet, warum Nachhaltigkeit und Regionalität wichtig sind, welche Vision verfolgt wird und wie der Slogan lautet („Nicht nur Brillenträger*in sein, sondern Brillenfreund*in werden!“ [oai_citation:62‡diebrillenfreunde.de](https://www.diebrillenfreunde.de/#:~:text=Unser%20Motto%3A)).  Erwähne, dass das Team aus Augenoptiker‑Meister*innen und Optometrist*innen besteht, die sich fortlaufend weiterbilden und modernste Technik nutzen.
+   • Stelle jedes Teammitglied mit Foto, Name, Qualifikation und kurzem Steckbrief vor.  Betone Professionalität und Freundlichkeit.
+   • Zeige den Standort mit Adresse, eingebetteter interaktiver Karte (z. B. Google Maps), Öffnungszeiten sowie Telefon‑ und E‑Mail‑Link.  Eine Tabelle oder Liste sorgt für Übersichtlichkeit.  Optional: Wenn mehrere Filialen vorhanden sind, liste sie mit Links und Anfahrtsbeschreibung auf.
+   • Kontakt‑/Terminformular mit Feldern für Name, E‑Mail, Telefonnummer, Wunschtermin (Datum + Uhrzeit), Grund des Besuchs (Dropdown) und eine optionale Nachricht.  Jede Eingabe erhält ein Label und `aria-describedby`, damit Screen‑Reader das Formular verstehen.  Am Ende befindet sich eine Checkbox zur Zustimmung zur Datenschutzerklärung.
+   • Podcast‑/Blog‑Teaser mit Verlinkung zu aktuellen Beiträgen oder Episoden, wenn vorhanden [oai_citation:63‡diebrillenfreunde.de](https://www.diebrillenfreunde.de/#:~:text=Um%20unsere%20Leidenschaft%20und%20unser,%E2%80%9Everr%C3%BCckte%20Idee%E2%80%9C%20wieder%20vielen%20gef%C3%A4llt).
+   • Footer wie auf der Startseite mit Impressum, Datenschutz, Cookie‑Einstellungen und Social‑Media‑Links.  Füge eine Zeile hinzu, dass alle Daten verschlüsselt übertragen und gemäß DSGVO verarbeitet werden.
 
-## Tech constraints
-- Use **plain HTML + CSS** (and minimal vanilla JS only if needed)
-- No frameworks
-- No external dependencies
-- Output files:
-  - `index.html`
-  - `styles.css`
-  - `script.js` (optional)
-  - `/assets` folder for placeholder images (use simple placeholders if no images exist)
-
-## Acceptance criteria
-- Lighthouse-friendly: semantic HTML, meta tags, alt text
-- Responsive: looks great on mobile and desktop
-- Buttons and form have hover/focus styles
-- Consistent spacing and layout
-- Easy to customize text & colors in one place (CSS variables)
-
-## Local run
-Open `index.html` in a browser, or use a simple server.
-
-## Notes
-- Replace placeholder address/phone/email with real data later.
-- Keep legal links as placeholders for now (Impressum/Datenschutz).
+5. **Sonstiges**
+   • Implementiere einen Cookie‑Banner, der beim ersten Seitenaufruf erscheint.  Er erklärt die Verwendung funktionaler und Marketing‑Cookies und lässt den Nutzer seine Präferenzen wählen.  Ein Link führt zu einer Seite mit detaillierten Informationen.
+   • Benutze für Icons eine freie Bibliothek wie FontAwesome.  Alle externen Ressourcen (Schriften, Icons) werden mit `integrity`‑Attribut eingebunden.
+   • Schreibe Kommentare im HTML/CSS, die die einzelnen Bereiche erklären.
