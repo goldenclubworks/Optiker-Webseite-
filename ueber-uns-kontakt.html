@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Über uns &amp; Kontakt | Optik Auenblick</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header mit Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Optik Auenblick</a>
+      <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="hauptnavigation">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18"></path>
+        </svg>
+      </button>
+      <nav class="site-nav" id="hauptnavigation">
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="ueber-uns-kontakt.html">Über uns &amp; Kontakt</a></li>
+          <li><a class="nav-cta" href="#termin">Termin buchen</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Unternehmensgeschichte -->
+    <section class="section">
+      <div class="container content-section">
+        <h1>Über Optik Auenblick</h1>
+        <p>
+          Seit 2008 begleiten wir Menschen in Hamburg mit der Vision, nachhaltiges Sehen und echte
+          Nähe zu vereinen. Unser Motto lautet: „Nicht nur Brillenträger*in sein, sondern
+          Brillenfreund*in werden!“
+        </p>
+        <p>
+          Wir arbeiten mit Augenoptiker-Meister*innen und Optometrist*innen, die regelmäßig
+          geschult werden und modernste Technik nutzen – für verantwortungsvolles, regionales
+          Handwerk.
+        </p>
+      </div>
+    </section>
+
+    <!-- Team-Detailseite -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Unser Team</h2>
+        <div class="team-grid">
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=400&q=80" alt="Person mit Brille prüft eine Fassung am Arbeitsplatz" />
+            <h3>Anna Keller</h3>
+            <p>Augenoptikermeisterin · Fokus Gleitsicht- &amp; Arbeitsplatzbrillen</p>
+            <p>Lieblingsmoment: Wenn Kund*innen beim ersten Blick lächeln.</p>
+          </article>
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?auto=format&fit=crop&w=400&q=80" alt="Person mit Brille berät in der Optiker-Lounge" />
+            <h3>Jonas Richter</h3>
+            <p>Optometrist · Spezialist für digitale Sehanalyse</p>
+            <p>Lieblingsmoment: Präzise Messungen mit 3D-Scanner.</p>
+          </article>
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=400&q=80" alt="Person mit Brille hält Kontaktlinsen und Pflegemittel" />
+            <h3>Sofia Wagner</h3>
+            <p>Kontaktlinsen-Spezialistin · zertifizierte Anpassungen</p>
+            <p>Lieblingsmoment: Wenn Linsen perfekt sitzen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt und Standort -->
+    <section class="section" id="kontakt">
+      <div class="container contact-layout">
+        <div>
+          <h2 class="section-title">Besuchen Sie uns</h2>
+          <ul class="info-list">
+            <li><strong>Adresse:</strong> Hafenstraße 12, 20457 Hamburg</li>
+            <li><strong>Telefon:</strong> <a href="tel:+4940123456">040 123 456</a></li>
+            <li><strong>E-Mail:</strong> <a href="mailto:kontakt@optik-auenblick.de">kontakt@optik-auenblick.de</a></li>
+          </ul>
+          <table class="hours" aria-label="Öffnungszeiten">
+            <thead>
+              <tr>
+                <th>Tag</th>
+                <th>Uhrzeit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Montag – Freitag</td>
+                <td>09:00 – 18:30 Uhr</td>
+              </tr>
+              <tr>
+                <td>Samstag</td>
+                <td>09:30 – 14:00 Uhr</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <iframe
+            title="Standort Optik Auenblick"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2370.4013668187586!2d9.989222515841657!3d53.5481189800204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18f7e1c0d3a11%3A0x4cb9e8fa51f8f4f9!2sHafenCity%2C%20Hamburg!5e0!3m2!1sde!2sde!4v1700000000000"
+            width="100%"
+            height="320"
+            style="border:0; border-radius: 12px;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terminformular -->
+    <section class="section" id="termin">
+      <div class="container">
+        <div class="content-section">
+          <h2>Kontakt- &amp; Terminformular</h2>
+          <form>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" aria-describedby="name-hint" required />
+              <small id="name-hint">Bitte Vor- und Nachnamen eintragen.</small>
+            </div>
+            <div class="form-row">
+              <label for="email">E-Mail</label>
+              <input id="email" name="email" type="email" aria-describedby="email-hint" required />
+              <small id="email-hint">Wir senden die Terminbestätigung an diese Adresse.</small>
+            </div>
+            <div class="form-row">
+              <label for="phone">Telefonnummer</label>
+              <input id="phone" name="phone" type="tel" aria-describedby="phone-hint" required />
+              <small id="phone-hint">Optional für Erinnerungen per SMS.</small>
+            </div>
+            <div class="form-row">
+              <label for="datetime">Wunschtermin (Datum &amp; Uhrzeit)</label>
+              <input id="datetime" name="datetime" type="datetime-local" aria-describedby="datetime-hint" required />
+              <small id="datetime-hint">Wir bestätigen oder schlagen Alternativen vor.</small>
+            </div>
+            <div class="form-row">
+              <label for="reason">Grund des Besuchs</label>
+              <select id="reason" name="reason" aria-describedby="reason-hint" required>
+                <option value="">Bitte auswählen</option>
+                <option>Sehtest &amp; Augenprüfung</option>
+                <option>Brillenberatung &amp; Fassungswahl</option>
+                <option>Kontaktlinsen</option>
+                <option>Reparatur &amp; Service</option>
+              </select>
+              <small id="reason-hint">So bereiten wir die passende Beratung vor.</small>
+            </div>
+            <div class="form-row">
+              <label for="message">Nachricht (optional)</label>
+              <textarea id="message" name="message" rows="4" aria-describedby="message-hint"></textarea>
+              <small id="message-hint">Teilen Sie uns besondere Wünsche oder Fragen mit.</small>
+            </div>
+            <div class="checkbox">
+              <input id="privacy" name="privacy" type="checkbox" required aria-describedby="privacy-hint" />
+              <label for="privacy">Ich stimme der Datenschutzerklärung zu.</label>
+            </div>
+            <small id="privacy-hint">Ihre Daten werden verschlüsselt übertragen.</small>
+            <button class="button-primary" type="submit">Termin anfragen</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Podcast/Blog-Teaser -->
+    <section class="section">
+      <div class="container promo">
+        <h2>Podcast &amp; Blog</h2>
+        <p>In unserem Blog teilen wir Tipps zu Sehhygiene, Nachhaltigkeit und neuen Kollektionen.</p>
+        <a href="#">Zu den Beiträgen</a>
+      </div>
+    </section>
+
+    <!-- Impressum und Datenschutz -->
+    <section class="section" id="impressum">
+      <div class="container content-section">
+        <h2>Impressum</h2>
+        <p>
+          Optik Auenblick GmbH · Hafenstraße 12 · 20457 Hamburg · Geschäftsführer: Anna Keller
+        </p>
+        <p>Handelsregister: HRB 123456 · USt-ID: DE123456789</p>
+      </div>
+    </section>
+
+    <section class="section" id="datenschutz">
+      <div class="container content-section">
+        <h2>Datenschutzerklärung</h2>
+        <p>
+          Wir verarbeiten Ihre Daten gemäß DSGVO. Alle Daten werden verschlüsselt übertragen,
+          ausschließlich zur Terminabstimmung genutzt und nicht an Dritte weitergegeben.
+        </p>
+        <p id="cookie-einstellungen">
+          Cookie-Einstellungen können jederzeit im Banner angepasst werden.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Optik Auenblick</h3>
+        <p>Hafenstraße 12, 20457 Hamburg</p>
+        <p>Telefon: <a href="tel:+4940123456">040 123 456</a></p>
+        <p>E-Mail: <a href="mailto:kontakt@optik-auenblick.de">kontakt@optik-auenblick.de</a></p>
+      </div>
+      <div>
+        <h3>Öffnungszeiten</h3>
+        <p>Mo–Fr: 09:00–18:30 Uhr</p>
+        <p>Sa: 09:30–14:00 Uhr</p>
+      </div>
+      <div>
+        <h3>Service</h3>
+        <p><a href="#impressum">Impressum</a></p>
+        <p><a href="#datenschutz">Datenschutz</a></p>
+        <p><a href="#cookie-einstellungen">Cookie-Einstellungen</a></p>
+      </div>
+      <div>
+        <h3>Social Media</h3>
+        <p>
+          <a href="https://www.instagram.com" aria-label="Instagram">Instagram</a>
+        </p>
+        <p>
+          <a href="https://www.facebook.com" aria-label="Facebook">Facebook</a>
+        </p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>Alle Daten werden verschlüsselt übertragen und gemäß DSGVO verarbeitet.</p>
+    </div>
+  </footer>
+
+  <!-- Cookie-Banner -->
+  <section class="cookie-banner" aria-live="polite">
+    <h2>Cookie-Einstellungen</h2>
+    <p>
+      Wir verwenden funktionale und Marketing-Cookies, um unsere Website und Beratung zu
+      verbessern. Details finden Sie in unserer <a href="#datenschutz">Datenschutzerklärung</a>.
+    </p>
+    <div class="form-row">
+      <label>
+        <input type="checkbox" id="cookies-functional" checked />
+        Funktionale Cookies (z.&nbsp;B. Terminformular)
+      </label>
+      <label>
+        <input type="checkbox" id="cookies-marketing" />
+        Marketing-Cookies (z.&nbsp;B. Angebote &amp; Aktionen)
+      </label>
+    </div>
+    <div class="cookie-actions">
+      <button class="cookie-primary" data-cookie-accept>Alle akzeptieren</button>
+      <button class="cookie-secondary" data-cookie-save>Auswahl speichern</button>
+      <button class="cookie-secondary" data-cookie-essential>Nur essenzielle Cookies</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
