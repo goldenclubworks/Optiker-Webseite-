@@ -29,6 +29,11 @@
 
     <main>
       <section class="hero">
+        <div class="hero-backdrop" aria-hidden="true">
+          <span class="hero-orbit"></span>
+          <span class="hero-orbit hero-orbit--small"></span>
+          <span class="hero-shimmer"></span>
+        </div>
         <div class="container hero-grid">
           <div>
             <span class="badge">Sehen erleben.</span>
@@ -72,13 +77,20 @@
         </div>
       </section>
 
-      <section id="leistungen" class="section">
+      <section id="leistungen" class="section section--lens">
         <div class="container">
-          <h2 class="section-title">Ihr Sehen. Ihr Stil. Ihre Lösung.</h2>
-          <p class="section-subtitle">
-            Brillen, Kontaktlinsen und präzise Sehanalyse – individuell abgestimmt und mit ruhiger
-            Beratung. Sie wählen. Ich berate.
-          </p>
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Ihr Sehen. Ihr Stil. Ihre Lösung.</h2>
+              <p class="section-subtitle">
+                Brillen, Kontaktlinsen und präzise Sehanalyse – individuell abgestimmt und mit ruhiger
+                Beratung. Sie wählen. Ich berate.
+              </p>
+            </div>
+            <div class="section-visual">
+              <img src="assets/img/optik-lens.svg" alt="Grafische Linsen-Illustration" />
+            </div>
+          </div>
           <div class="cards">
             <article class="card">
               <h3>Aussehen. Durchsehen.</h3>
@@ -105,10 +117,17 @@
         </div>
       </section>
 
-      <section id="service" class="section">
+      <section id="service" class="section section--atelier">
         <div class="container">
-          <h2 class="section-title">Service, der bleibt.</h2>
-          <p class="section-subtitle">Verlässlichkeit, Sicherheit und Zeit für Ihre Wünsche.</p>
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Service, der bleibt.</h2>
+              <p class="section-subtitle">Verlässlichkeit, Sicherheit und Zeit für Ihre Wünsche.</p>
+            </div>
+            <div class="section-visual">
+              <img src="assets/img/optik-atelier.svg" alt="Sanfte Linien als Ateliertisch" />
+            </div>
+          </div>
           <div class="service-columns">
             <div class="highlight">
               <ul class="list">
@@ -157,7 +176,7 @@
         </div>
       </section>
 
-      <section id="vertrauen" class="section">
+      <section id="vertrauen" class="section section--trust">
         <div class="container">
           <div class="trust">
             <div class="highlight">
@@ -175,11 +194,14 @@
               </p>
               <p class="small">Auswahl nach Hause. In Ruhe entscheiden.</p>
             </div>
+            <div class="trust-visual">
+              <img src="assets/img/optik-focus.svg" alt="Abstrakte Fokus-Grafik" />
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="angebote" class="section">
+      <section id="angebote" class="section section--offers">
         <div class="container">
           <h2 class="section-title">Angebote</h2>
           <p class="section-subtitle">
@@ -187,30 +209,48 @@
             mit. Kein Ausdruck möglich? Sagen Sie es bei Ihrem Besuch – Sie profitieren
             selbstverständlich trotzdem.
           </p>
-          <div class="button-row">
-            <a
-              class="btn btn-primary"
-              href="https://www.optik-schorcht.de/sites/5f0db0f3dc29a00680a36235/assets/64186fb2dc29a049831f405e/Brillen_clever_finanzieren.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Brillenabo ansehen (PDF)
-            </a>
-            <a
-              class="btn btn-secondary"
-              href="https://www.optik-schorcht.de/sites/5f0db0f3dc29a00680a36235/assets/6322f8addc29a0091ff49f23/prima-direct.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Prima Direct (PDF)
-            </a>
+          <div class="offer-panel">
+            <div>
+              <p class="small">
+                Flexibel bleiben und trotzdem Premiumqualität erleben: Finanzieren Sie Ihre neue
+                Brille oder sichern Sie sich Vorteile für Kontaktlinsen.
+              </p>
+            </div>
+            <div class="button-row">
+              <a
+                class="btn btn-primary"
+                href="https://www.optik-schorcht.de/sites/5f0db0f3dc29a00680a36235/assets/64186fb2dc29a049831f405e/Brillen_clever_finanzieren.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Brillenabo ansehen (PDF)
+              </a>
+              <a
+                class="btn btn-secondary"
+                href="https://www.optik-schorcht.de/sites/5f0db0f3dc29a00680a36235/assets/6322f8addc29a0091ff49f23/prima-direct.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Prima Direct (PDF)
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="kontakt" class="section">
+      <section id="kontakt" class="section section--contact">
         <div class="container">
-          <h2 class="section-title">Kontakt &amp; Öffnungszeiten</h2>
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Kontakt &amp; Öffnungszeiten</h2>
+              <p class="section-subtitle">
+                Zentral in Dresden, leicht erreichbar, mit viel Zeit für Sie.
+              </p>
+            </div>
+            <div class="section-visual section-visual--compact">
+              <img src="assets/img/optik-map.svg" alt="Illustration einer Karte" />
+            </div>
+          </div>
           <div class="contact-grid">
             <div class="contact-card">
               <p><strong>Optik Schorcht</strong></p>
