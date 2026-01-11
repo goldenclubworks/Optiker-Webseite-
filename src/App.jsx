@@ -4,11 +4,32 @@ const mapSrc =
   'https://www.dvb.de/de-de/hl?id=0100poiID%3A2104106643%3A14612000%3A-1%3ADVB-Kundenzentrum%3ADresden%3ADVB-Kundenzentrum%3AANY%3APOI%3A4621698%3A501254%3ANAV4%3Avvo';
 
 const navLinks = [
-  { href: '#leistungen', label: 'Leistungen' },
+  { href: '#kollektionen', label: 'Kollektionen' },
+  { href: '#leistungen', label: 'Service' },
   { href: '#atelier', label: 'Atelier' },
+  { href: '#ablauf', label: 'Ablauf' },
   { href: '#vertrauen', label: 'Vertrauen' },
   { href: '#angebote', label: 'Angebote' },
   { href: '#kontakt', label: 'Kontakt' },
+];
+
+const collectionHighlights = [
+  {
+    title: 'Signature-Fassungen',
+    text: 'Designorientierte Marken, kuratiert nach Gesichtsform, Stil und Tageslichtwirkung.',
+  },
+  {
+    title: 'Sonnenbrillen mit Anspruch',
+    text: 'Polarisations- und Kontrastgläser für Stadt, Reise und sportliche Momente.',
+  },
+  {
+    title: 'Kontaktlinsen & Pflege',
+    text: 'Tages-, Monats- und Speziallinsen mit sauberem Einweisungs- und Hygieneplan.',
+  },
+  {
+    title: 'Kids & Teens',
+    text: 'Robuste, leichte Modelle mit verlässlicher Nachbetreuung für wachsende Augen.',
+  },
 ];
 
 const serviceHighlights = [
@@ -26,11 +47,52 @@ const serviceHighlights = [
   },
 ];
 
+const experienceSteps = [
+  {
+    title: 'Ankommen & Stilprofil',
+    text: 'Wir hören zu, definieren Sehgewohnheiten und bauen daraus Ihr persönliches Profil.',
+    meta: '15–20 Minuten',
+  },
+  {
+    title: '3D-Sehanalyse',
+    text: 'Messungen mit Visionix 120, ergänzt um Kontrast- und Nachtseh-Checks.',
+    meta: '25–35 Minuten',
+  },
+  {
+    title: 'Fassung & Glas-Setup',
+    text: 'Material, Glasdesign und Alltagsszenarien werden greifbar simuliert.',
+    meta: '20–30 Minuten',
+  },
+  {
+    title: 'Feinschliff & Service',
+    text: 'Passform-Check, Nachjustierung und Erinnerungsservice für Folge-Checks.',
+    meta: 'Optional',
+  },
+];
+
 const trustPoints = [
   '30+ Jahre Erfahrung in Dresden.',
   'Persönliche 1:1 Beratung ohne Zeitdruck.',
   'Achtsame Auswahl von Markenfassungen & Premium-Gläsern.',
   'Transparente Empfehlungen, nachvollziehbar erklärt.',
+];
+
+const testimonials = [
+  {
+    quote:
+      '„Die Beratung war so ruhig und präzise, dass ich zum ersten Mal wirklich verstanden habe, was meine Augen brauchen.“',
+    author: 'Kundin, Neustadt',
+  },
+  {
+    quote:
+      '„Stil und Technik sind perfekt verbunden – die Brille fühlt sich an wie maßgeschneidert.“',
+    author: 'Kunde, Striesen',
+  },
+  {
+    quote:
+      '„Vom Sehtest bis zur Abholung: alles strukturiert, herzlich und ohne Hektik.“',
+    author: 'Kundin, Altstadt',
+  },
 ];
 
 const offers = [
@@ -92,11 +154,11 @@ export default function App() {
           <div className="hero-glow" aria-hidden="true" />
           <div className="container hero-grid">
             <div className="hero-content">
-              <span className="badge">Sehen erleben.</span>
-              <h1>Fotorealistisch. Ruhig. Präzise.</h1>
+              <span className="badge">Design trifft Sehkomfort.</span>
+              <h1>Optik, die wie ein Atelier denkt.</h1>
               <p>
-                Optik Schorcht verbindet feinfühlige Beratung mit hochwertiger Technik – in einem
-                Atelier, das Licht, Material und Ruhe neu denkt.
+                Kuratierte Kollektionen, ehrliche Beratung und eine 3D-Sehanalyse, die jedes Detail
+                sichtbar macht. Für Brillen, die Sie täglich gern tragen.
               </p>
               <div className="button-row">
                 <a
@@ -121,24 +183,53 @@ export default function App() {
                   <span>Visionix 120</span>
                 </div>
                 <div>
-                  <strong>1:1 Beratung</strong>
-                  <span>Mit Zeit</span>
+                  <strong>Design-Fokus</strong>
+                  <span>Kuratiert statt beliebig</span>
                 </div>
               </div>
             </div>
             <div className="hero-media">
               <div className="photo-panel photo-panel--hero" role="img" aria-label="Premium-Atelier mit warmem Licht">
                 <div className="photo-panel__label">Atelier-Atmosphäre</div>
-                <div className="photo-panel__title">Wärme. Textur. Licht.</div>
+                <div className="photo-panel__title">Licht. Ruhe. Präzision.</div>
                 <div className="photo-panel__meta">
-                  <span>Fotorealistische Tiefenwirkung</span>
-                  <span>Framer-Ästhetik</span>
+                  <span>Kuratiertes Interior</span>
+                  <span>High-End Sehtest</span>
                 </div>
               </div>
               <div className="photo-stack">
                 <div className="photo-panel photo-panel--detail" role="img" aria-label="Detailaufnahme einer Brille" />
                 <div className="photo-panel photo-panel--portrait" role="img" aria-label="Beratung im Fokus" />
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="kollektionen" className="section section--collections">
+          <div className="container">
+            <div className="section-header">
+              <div>
+                <h2 className="section-title">Kollektionen mit Charakter.</h2>
+                <p className="section-subtitle">
+                  Inspiriert von internationalen Designhäusern – reduziert, hochwertig und exakt auf
+                  Ihre Linienführung abgestimmt.
+                </p>
+              </div>
+              <div className="section-visual section-visual--orbit" aria-hidden="true" />
+            </div>
+            <div className="collection-grid">
+              {collectionHighlights.map((item) => (
+                <article key={item.title} className="card card--glass">
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </article>
+              ))}
+            </div>
+            <div className="pill-row" aria-label="Markenfokus">
+              <span>Design-orientiert</span>
+              <span>Handverlesene Hersteller</span>
+              <span>Made in EU</span>
+              <span>Premium-Gläser</span>
             </div>
           </div>
         </section>
@@ -196,6 +287,33 @@ export default function App() {
           </div>
         </section>
 
+        <section id="ablauf" className="section section--process">
+          <div className="container">
+            <div className="section-header">
+              <div>
+                <h2 className="section-title">So läuft Ihr Termin ab.</h2>
+                <p className="section-subtitle">
+                  Klar strukturiert, angenehm ruhig und mit messbarer Präzision – damit jedes Detail
+                  stimmt.
+                </p>
+              </div>
+              <div className="section-visual section-visual--ripple" aria-hidden="true" />
+            </div>
+            <div className="process-grid">
+              {experienceSteps.map((step, index) => (
+                <article key={step.title} className="process-card">
+                  <div className="process-card__index">{index + 1}</div>
+                  <div>
+                    <h3>{step.title}</h3>
+                    <p>{step.text}</p>
+                    <span className="process-card__meta">{step.meta}</span>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="vertrauen" className="section section--trust">
           <div className="container">
             <div className="section-header">
@@ -222,6 +340,14 @@ export default function App() {
                   Manufakturfassungen – für sichtbare Perfektion.
                 </p>
               </div>
+            </div>
+            <div className="testimonial-grid">
+              {testimonials.map((item) => (
+                <figure key={item.author} className="testimonial-card">
+                  <blockquote>{item.quote}</blockquote>
+                  <figcaption>{item.author}</figcaption>
+                </figure>
+              ))}
             </div>
           </div>
         </section>
