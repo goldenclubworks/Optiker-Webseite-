@@ -1,40 +1,116 @@
-// Aufgabenstellung an Codex (Beispiel)
+# WEB CODEX AGENT — OPTIK SCHORCHT LIVE → PREMIUM ONEPAGER (HIGH-STAKES)
 
-Erstelle eine professionelle, responsive Webseite für einen Optiker mit drei Seiten (Startseite, Leistungen, Über uns & Kontakt).  Sie soll klar strukturiert, modern und zugänglich sein und die Alleinstellungsmerkmale des Optikers (Nachhaltigkeit, Regionalität, persönliche Zeit für Kunden) hervorheben.  Die Seite wird in deutscher Sprache erstellt und erfüllt die DSGVO‑ und Impressumspflichten.
+Du bist **ChatGPT Web Codex (Agent)** mit Repo-Zugriff (Write Access).  
+Dieses Repo enthält aktuell nur diese README.md. Es gibt **keinen HTTrack-Dump**.
 
-1. **Layout & Stil**
-   • Verwende HTML5‑Semantik (header/nav/main/footer) und gut lesbare, moderne Schriftarten (z. B. „Open Sans“).  Die Grundfarben sind Weiß bzw. Hellgrau; Akzentfarbe ist Türkis (#007e9f) für Buttons und Links.  Lege CSS‑Variablen für Farben an.
-   • Alle Bilder müssen responsive sein und sinnvolle `alt`‑Texte haben, die die Situation beschreiben (z. B. „Person mit Brille liest ein Buch“), ohne eine reale Person zu identifizieren.
-   • Das Menü enthält Links zu allen drei Seiten und einen hervorgehobenen Button „Termin buchen“.  Auf mobilen Geräten verwandelt sich das Menü in ein Burger‑Menü.
+## 0) Rolle & Anspruch (High Stakes)
+Du bist ein **Senior Web Architect + UX/UI Designer + Frontend Engineer + Conversion/Trust Strategist**
+für **High-Trust lokale Dienstleister** (Optiker/Gesundheit).  
+Das Projekt ist **high-stakes** (große Summen, hoher Qualitätsanspruch).  
+Du arbeitest **extrem gründlich**, **dokumentierst Entscheidungen** und lieferst **production-quality**.
 
-2. **Startseite**
-   • Hero‑Bereich mit großem Hintergrundbild (Menschen mit modischen Brillen), Überschrift („Mehr als eine Brille – wir kümmern uns um Ihr gutes Sehen“) und Untertitel, der Nachhaltigkeit und persönliche Beratung betont; darunter ein Button „Jetzt Wunschtermin sichern“, der zum Terminformular führt.
-   • Bereich „Unsere Leistungen“ mit vier Karten: „Sehtest & Augenprüfung“, „Brillenberatung & Fassungswahl“, „Kontaktlinsen & Pflegemittel“ und „Reparatur & Service“.  Jede Karte zeigt ein Icon, eine kurze Beschreibung und einen Link zur Leistungs‑Seite.  Dies spiegelt die strukturierte Darstellung des Leistungsspektrums wider [oai_citation:47‡sorglos.online](https://www.sorglos.online/de/branche/optiker_webseiten/#:~:text=1).
-   • Abschnitt „Unsere Werte“ mit drei Spalten: Nachhaltigkeit (Brillen aus Deutschland/Österreich/Schweiz und recyceltes Zubehör [oai_citation:48‡diebrillenfreunde.de](https://www.diebrillenfreunde.de/#:~:text=Dein%20Optiker%20f%C3%BCr%20Die%20nachhaltige,und%20regionale%20Brille)), Regionalität (lokale Produktion, kurze Lieferwege [oai_citation:49‡diebrillenfreunde.de](https://www.diebrillenfreunde.de/#:~:text=Als%20Hamburger%20Optiker%20legen%20wir,st%C3%A4rken%20auch%20die%20lokale%20Wirtschaft)) und Zeit (individuelle Beratung ohne Hektik [oai_citation:50‡diebrillenfreunde.de](https://www.diebrillenfreunde.de/#:~:text=,Optiker%20in%20Hamburg%2C%20der%20zuh%C3%B6rt)).
-   • Teamvorstellung mit runden Fotos, Namen, Funktionen und kurzem Text zur Qualifikation (Meistertitel, Optometrist/in).  Ein Link führt zur ausführlichen Teamseite unter „Über uns“.
-   • Kundenbewertungen/Testimonials mit zwei bis drei kurzen Zitaten.  Optional: Aktionsbereich mit aktuellen Angeboten, Rabattaktionen oder Hinweisen auf neue Kollektionen.
-   • Footer mit Kontaktinformationen, Öffnungszeiten, Social‑Media‑Links, Impressum‑ und Datenschutz‑Links sowie Cookie‑Banner.
+## 1) Ziel
+Baue eine neue moderne Website als **OnePager** (Premium, ruhig, seriös, high-trust).
+Quelle ist die LIVE-Website:
 
-3. **Leistungen‑Seite**
-   • Einleitender Abschnitt über die Bedeutung von gutem Sehen und die Belastung durch digitale Geräte [oai_citation:51‡optik-volz.de](https://optik-volz.de/#:~:text=Ihre%20Augen%20liegen%20uns%20am,Herzen).  Erwähne, dass das Unternehmen modernste Technik nutzt und das Team regelmäßig geschult wird [oai_citation:52‡optik-volz.de](https://optik-volz.de/#:~:text=Kontinuierliche%20Weiterbildung%20unserer%20Mitarbeiter%2C%20der,u%CC%88berregional%20einen%20ausgezeichneten%20Ruf%20erworben).
-   • Detaillierte Unterabschnitte:
-     – **Sehtest & Augenprüfung:** Erkläre verschiedene Testarten (Standard‑Sehtest, Führerschein‑Sehtest, Gesundheitscheck) und die verwendeten Geräte (3D‑Scanner), betone die präzise Messung und den augenärztlichen Befund [oai_citation:53‡optik-volz.de](https://optik-volz.de/#:~:text=an%20Brillenmodellen%20fu%CC%88r%20jeden%20Geschmack,Zus%C3%A4tzliche%20Leistungen%20wie%20zum).
-     – **Brillenberatung & Fassungswahl:** Beschreibe die Auswahl an Brillen für Damen, Herren und Kinder – von Lese- über Gleitsicht‑ bis zu Sport- und Sonnenbrillen [oai_citation:54‡optik-volz.de](https://optik-volz.de/#:~:text=Unsere%20Brillen).  Betone, dass eine sorgfältig ausgesuchte Brille die Persönlichkeit unterstreicht [oai_citation:55‡optik-volz.de](https://optik-volz.de/#:~:text=Ob%20eine%20Hornbrille%2C%20eine%20Lesebrille%2C,garantiert%20fu%CC%88r%20jeden%20das%20Richtige).
-     – **Kontaktlinsen & Pflegemittel:** Beschreibe verschiedene Linsenarten (Tages‑/Wochen‑/Monatslinsen, multifokale Linsen), die Anpassung und Beratung [oai_citation:56‡fielmann.de](https://www.fielmann.de/service/termin-buchen/#:~:text=) und weise auf Pflegemittel und Abo‑Optionen hin [oai_citation:57‡glasson.app](https://www.glasson.app/de/blog/wie-optiker-ihre-online-prasenz-maximieren-konnen-tipps-fur-soziale-medien-und-websites/#:~:text=Warum%20eine%20Online,wichtig%20ist).
-     – **Reparatur & Service:** Erläutere Anpassungen, Reparaturen, Brillenreinigung und Garantieleistungen; betone, dass auch nach dem Kauf Betreuung stattfindet [oai_citation:58‡optik-volz.de](https://optik-volz.de/#:~:text=Auch%20nach%20dem%20Kauf%20Ihrer,Optik%20Volz%20in%20besten%20H%C3%A4nden).
-     – **Spezialleistungen & Technologien:** Stelle besondere Angebote wie 3D‑Sehtest oder DNEye‑Scanner [oai_citation:59‡optik-volz.de](https://optik-volz.de/#:~:text=Optik%20Volz%20,in%20Heidelberg%20und%20Kornwestheim) vor.
-   • FAQ‑Bereich mit häufig gestellten Fragen (z. B. „Kratzer auf Brillengläsern entfernen?“ [oai_citation:60‡diebrillenfreunde.de](https://www.diebrillenfreunde.de/#:~:text=%3A%20%3BKann%20man%20Kratzer%20aus,Brillengl%C3%A4sern%20entfernen)).  Jede Frage ist ein `<details>`‑Element mit `<summary>`.
-   • Am Ende der Seite ein gut sichtbarer Button „Termin buchen“ mit Hinweis auf Terminbestätigung und Erinnerungsservice [oai_citation:61‡fielmann.de](https://www.fielmann.de/service/termin-buchen/#:~:text=Nach%20der%20Buchung%20bekommst%20du,allen%20Details%20zu%20deinem%20Termin).
+- https://www.optik-schorcht.de/
 
-4. **Über‑uns‑/Kontakt‑Seite**
-   • Erzähle die Geschichte und Philosophie des Unternehmens: wann gegründet, warum Nachhaltigkeit und Regionalität wichtig sind, welche Vision verfolgt wird und wie der Slogan lautet („Nicht nur Brillenträger*in sein, sondern Brillenfreund*in werden!“ [oai_citation:62‡diebrillenfreunde.de](https://www.diebrillenfreunde.de/#:~:text=Unser%20Motto%3A)).  Erwähne, dass das Team aus Augenoptiker‑Meister*innen und Optometrist*innen besteht, die sich fortlaufend weiterbilden und modernste Technik nutzen.
-   • Stelle jedes Teammitglied mit Foto, Name, Qualifikation und kurzem Steckbrief vor.  Betone Professionalität und Freundlichkeit.
-   • Zeige den Standort mit Adresse, eingebetteter interaktiver Karte (z. B. Google Maps), Öffnungszeiten sowie Telefon‑ und E‑Mail‑Link.  Eine Tabelle oder Liste sorgt für Übersichtlichkeit.  Optional: Wenn mehrere Filialen vorhanden sind, liste sie mit Links und Anfahrtsbeschreibung auf.
-   • Kontakt‑/Terminformular mit Feldern für Name, E‑Mail, Telefonnummer, Wunschtermin (Datum + Uhrzeit), Grund des Besuchs (Dropdown) und eine optionale Nachricht.  Jede Eingabe erhält ein Label und `aria-describedby`, damit Screen‑Reader das Formular verstehen.  Am Ende befindet sich eine Checkbox zur Zustimmung zur Datenschutzerklärung.
-   • Podcast‑/Blog‑Teaser mit Verlinkung zu aktuellen Beiträgen oder Episoden, wenn vorhanden [oai_citation:63‡diebrillenfreunde.de](https://www.diebrillenfreunde.de/#:~:text=Um%20unsere%20Leidenschaft%20und%20unser,%E2%80%9Everr%C3%BCckte%20Idee%E2%80%9C%20wieder%20vielen%20gef%C3%A4llt).
-   • Footer wie auf der Startseite mit Impressum, Datenschutz, Cookie‑Einstellungen und Social‑Media‑Links.  Füge eine Zeile hinzu, dass alle Daten verschlüsselt übertragen und gemäß DSGVO verarbeitet werden.
+Du sollst die Website **vollständig analysieren**, Inhalte **kuratieren**, **verdichten** und als OnePager
+neu strukturieren.
 
-5. **Sonstiges**
-   • Implementiere einen Cookie‑Banner, der beim ersten Seitenaufruf erscheint.  Er erklärt die Verwendung funktionaler und Marketing‑Cookies und lässt den Nutzer seine Präferenzen wählen.  Ein Link führt zu einer Seite mit detaillierten Informationen.
-   • Benutze für Icons eine freie Bibliothek wie FontAwesome.  Alle externen Ressourcen (Schriften, Icons) werden mit `integrity`‑Attribut eingebunden.
-   • Schreibe Kommentare im HTML/CSS, die die einzelnen Bereiche erklären.
+## 2) Kritische Regeln (nicht verhandelbar)
+- Keine generischen Texte, kein Buzzword-Müll.
+- Keine Annahmen ohne Beleg aus der Website. Falls etwas fehlt: sauberer Platzhalter + in Notes markieren.
+- Mobile-First, perfekte Responsiveness.
+- Sehr gute Typografie, klare Hierarchie, viel Weißraum, Premium-Ästhetik.
+- Datenschutzfreundlich: externe Embeds (z.B. Google Maps) nur nach Klick/Einwilligung laden.
+- Keine Tracking-Skripte aktivieren.
+- Ergebnis muss wartbar sein (saubere Struktur, klare Dateien, keine unnötigen Abhängigkeiten).
+
+## 3) Arbeitsprozess (Agentenmodus, verpflichtend)
+### Phase A — Live-Audit & Content-Inventar (zwingend zuerst)
+1) Besuche die Live-Website und erfasse ALLE relevanten Bereiche:
+   - Start / Navigation / Footer
+   - alle Unterseiten
+   - alle Downloads (PDF)
+   - alle eingebetteten Inhalte (iframes)
+   - Kontaktinfos (Tel/Mail/Adresse/Öffnungszeiten)
+2) Erstelle ein **Content-Inventar** und ein **Link-Inventar**:
+   - interne Seiten-Links
+   - PDF-Links
+   - externe Webseiten-Links
+   - iframe-Embeds (z.B. Google Maps, DVB etc.)
+   - mailto:- und tel:-Links
+   - relevante Skript-/Asset-Quellen (CDNs)
+3) Dokumentiere alles in:
+   - `CONTENT_MAP.md` (mit Priorisierung: Must/Should/Could)
+   - `LINK_INVENTORY.md` (vollständig + Typisierung)
+
+> WICHTIG: Wenn du beim Crawlen auf Cookie-Consent stößt:
+> - dokumentiere, welche Inhalte dadurch blockiert sind
+> - aber arbeite weiter mit dem, was du ohne Consent sicher analysieren kannst
+> - Embeds später privacy-friendly im neuen OnePager lösen
+
+### Phase B — OnePager-Konzept (Strategie + Struktur)
+Erstelle das neue Konzept in `ONEPAGER_PLAN.md`:
+- Zielgruppe & Trust-Faktoren
+- Hauptbotschaft (Value Proposition)
+- Informationsarchitektur (Sections, Reihenfolge, CTA-Logik)
+- Welche Inhalte werden gestrichen/verdichtet und warum
+
+### Phase C — Copywriting (nicht generisch, high-trust)
+Erstelle `COPY_DE.md`:
+- Headlines + Subheadlines pro Section
+- Leistungs-Texte (klar, präzise)
+- CTA-Texte (Termin, Kontakt)
+- Microcopy (Formulare, Buttons, Hinweise)
+
+### Phase D — Design System (Premium, zeitlos)
+Erstelle `DESIGN_SYSTEM.md`:
+- Typografie-Skala
+- Spacing-System
+- Komponenten (Button, Card, Section, Grid)
+- Farbpalette (ruhig, seriös, gut lesbar)
+- Accessibility-Vorgaben (Fokus, Kontrast)
+
+### Phase E — Umsetzung (Code, production-ready)
+Du implementierst die Website im Repo.
+
+**Technikentscheidung:**
+Wähle die einfachste robuste Lösung:
+- bevorzugt: **Plain HTML/CSS/JS** (kein Build)
+- nur wenn nötig: Vite (Vanilla) – aber begründe in `IMPROVEMENT_NOTES.md`
+
+**Dateien, die entstehen müssen:**
+- `index.html`
+- `assets/css/styles.css`
+- `assets/js/main.js` (nur wenn nötig)
+- `assets/img/` (nur wenn du Bilder einbindest)
+- `impressum.html` und `datenschutz.html` (oder als Sections – aber beide müssen erreichbar sein)
+- `IMPROVEMENT_NOTES.md` (Entscheidungen, Annahmen, offene Punkte)
+
+### Phase F — Privacy-Friendly Embeds (Pflicht wenn Embeds existieren)
+Wenn Google Maps / DVB / andere externe Embeds:
+- Standard: Placeholder mit Button "Karte laden"
+- Erst nach Klick wird iframe src gesetzt (kein Request vorher)
+
+### Phase G — QA & Abschluss
+Erstelle `QA_CHECKLIST.md` und hake ab:
+- Mobile Nav funktioniert
+- alle Links korrekt
+- schnelle Ladezeit
+- saubere Semantik (H1/H2)
+- Alt-Texte, Fokus-States
+- keine kaputten Pfade
+- CTAs führen zu Tel/Mail/Anfrage
+
+## 4) Output-Standards
+- Kein Code-Spaghetti
+- Keine unnötigen Libraries
+- Kommentare nur da, wo es hilft
+- Alles in deutscher Sprache
+- Der OnePager soll wie ein moderner Premium-Optiker wirken (High-Trust)
+
+## 5) START
+Beginne jetzt mit **Phase A** (Live-Audit).
+Erstelle zuerst `CONTENT_MAP.md` und `LINK_INVENTORY.md`, dann weiter in Phasen.
