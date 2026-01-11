@@ -137,14 +137,23 @@ export default function App() {
             className={`nav${navOpen ? ' open' : ''}`}
             aria-label="Hauptnavigation"
           >
-            {navLinks.map((link) => (
-              <a key={link.href} href={link.href} onClick={handleNavClick}>
-                {link.label}
+            <div className="nav-links">
+              {navLinks.map((link) => (
+                <a key={link.href} href={link.href} onClick={handleNavClick}>
+                  {link.label}
+                </a>
+              ))}
+            </div>
+            <div className="nav-actions">
+              <a
+                className="nav-cta btn btn-primary"
+                href="https://www.sehen.de/augenoptiker-suche/dresden/01067/augenoptik-schorcht/terminanfrage/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Termin
               </a>
-            ))}
-            <a className="nav-cta" href="https://www.sehen.de/augenoptiker-suche/dresden/01067/augenoptik-schorcht/terminanfrage/" target="_blank" rel="noreferrer">
-              Termin
-            </a>
+            </div>
           </nav>
         </div>
       </header>
