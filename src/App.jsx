@@ -1,118 +1,125 @@
 import { useState } from 'react';
 
-const mapSrc =
-  'https://www.dvb.de/de-de/hl?id=0100poiID%3A2104106643%3A14612000%3A-1%3ADVB-Kundenzentrum%3ADresden%3ADVB-Kundenzentrum%3AANY%3APOI%3A4621698%3A501254%3ANAV4%3Avvo';
-
 const navLinks = [
-  { href: '#kollektionen', label: 'Kollektionen' },
-  { href: '#leistungen', label: 'Service' },
-  { href: '#atelier', label: 'Atelier' },
-  { href: '#ablauf', label: 'Ablauf' },
+  { href: '#leistungen', label: 'Leistungen' },
+  { href: '#strategie', label: 'Strategie' },
+  { href: '#struktur', label: 'Struktur' },
+  { href: '#prozess', label: 'Ablauf' },
   { href: '#vertrauen', label: 'Vertrauen' },
-  { href: '#angebote', label: 'Angebote' },
+  { href: '#insights', label: 'Service' },
   { href: '#kontakt', label: 'Kontakt' },
-];
-
-const collectionHighlights = [
-  {
-    title: 'Signature-Fassungen',
-    text: 'Designorientierte Marken, kuratiert nach Gesichtsform, Stil und Tageslichtwirkung.',
-  },
-  {
-    title: 'Sonnenbrillen mit Anspruch',
-    text: 'Polarisations- und Kontrastgläser für Stadt, Reise und sportliche Momente.',
-  },
-  {
-    title: 'Kontaktlinsen & Pflege',
-    text: 'Tages-, Monats- und Speziallinsen mit sauberem Einweisungs- und Hygieneplan.',
-  },
-  {
-    title: 'Kids & Teens',
-    text: 'Robuste, leichte Modelle mit verlässlicher Nachbetreuung für wachsende Augen.',
-  },
 ];
 
 const serviceHighlights = [
   {
-    title: 'Brillen, die Persönlichkeit zeigen.',
-    text: 'Markant, elegant, sportlich – Fassungen, die Ihren Stil tragen und die Augenlinie betonen.',
+    title: 'Vermögensstrategie & Ziele',
+    text: 'Klare Zielbilder, priorisierte Lebensphasen und realistische Rendite-Risiko-Rahmen.',
   },
   {
-    title: 'Kontaktlinsen mit Präzision.',
-    text: 'Individuell angepasst, mit Hornhaut-Topographie und engmaschiger Kontrolle für langes Wohlgefühl.',
+    title: 'Portfolio-Architektur',
+    text: 'Diversifiziert, transparent, mit nachvollziehbarer Logik statt Produktverkauf.',
   },
   {
-    title: '3D-Sehanalyse mit Feingefühl.',
-    text: 'Visionix 120 für Kontrast, Tiefenschärfe und klares Sehen bei Tages- und Kunstlicht.',
+    title: 'Risikomanagement & Liquidität',
+    text: 'Sicherheitsbausteine, Liquiditätsplanung und Stress-Tests für Ruhe im Alltag.',
   },
 ];
 
-const experienceSteps = [
+const strategyPillars = [
   {
-    title: 'Ankommen & Stilprofil',
-    text: 'Wir hören zu, definieren Sehgewohnheiten und bauen daraus Ihr persönliches Profil.',
-    meta: '15–20 Minuten',
+    title: 'Standortbestimmung',
+    text: 'Vermögen, Verpflichtungen, Werte – wir schaffen eine ehrliche Ausgangsbasis.',
   },
   {
-    title: '3D-Sehanalyse',
-    text: 'Messungen mit Visionix 120, ergänzt um Kontrast- und Nachtseh-Checks.',
-    meta: '25–35 Minuten',
+    title: 'Leitplanken definieren',
+    text: 'Risikoprofil, Zeithorizont und Liquiditätsbedarfe als feste Orientierung.',
   },
   {
-    title: 'Fassung & Glas-Setup',
-    text: 'Material, Glasdesign und Alltagsszenarien werden greifbar simuliert.',
-    meta: '20–30 Minuten',
+    title: 'Planung mit Szenarien',
+    text: 'Mehrere Zukunftsbilder geben Sicherheit bei Marktbewegungen.',
+  },
+];
+
+const structureHighlights = [
+  {
+    title: 'Vermögensstruktur & Nachfolge',
+    text: 'Familie, Stiftung oder Unternehmen – die Struktur folgt Ihren Werten.',
   },
   {
-    title: 'Feinschliff & Service',
-    text: 'Passform-Check, Nachjustierung und Erinnerungsservice für Folge-Checks.',
-    meta: 'Optional',
+    title: 'Steuer- & Rechtsabstimmung',
+    text: 'In Abstimmung mit Steuer- und Rechtsexperten (nach Bedarf und Freigabe).',
+  },
+  {
+    title: 'Monitoring & Berichte',
+    text: 'Regelmäßige Reviews, transparente Reportings und ruhige Kommunikation.',
+  },
+];
+
+const processSteps = [
+  {
+    title: 'Erstgespräch',
+    text: 'Ziele, Werte und Rahmenbedingungen verstehen – vertraulich und strukturiert.',
+    meta: '60 Minuten',
+  },
+  {
+    title: 'Analyse & Konzept',
+    text: 'Bestandsaufnahme, Szenarien und ein individueller Strategieentwurf.',
+    meta: '2–3 Wochen',
+  },
+  {
+    title: 'Umsetzung',
+    text: 'Schrittweise Implementierung mit klarer Dokumentation.',
+    meta: 'Nach Vereinbarung',
+  },
+  {
+    title: 'Begleitung',
+    text: 'Regelmäßige Reviews, Anpassungen und Sparrings-Formate.',
+    meta: 'Quartalsweise',
   },
 ];
 
 const trustPoints = [
-  '30+ Jahre Erfahrung in Dresden.',
-  'Persönliche 1:1 Beratung ohne Zeitdruck.',
-  'Achtsame Auswahl von Markenfassungen & Premium-Gläsern.',
-  'Transparente Empfehlungen, nachvollziehbar erklärt.',
+  'Unabhängige Beratung ohne Produktdruck.',
+  'Klar strukturierte Dokumentation.',
+  'Langfristige Begleitung statt kurzfristiger Maßnahmen.',
+  'Vertraulicher Umgang mit sensiblen Daten.',
 ];
 
 const testimonials = [
   {
     quote:
-      '„Die Beratung war so ruhig und präzise, dass ich zum ersten Mal wirklich verstanden habe, was meine Augen brauchen.“',
-    author: 'Kundin, Neustadt',
+      '„Endlich eine Beratung, die unsere Familie wirklich versteht und nichts beschönigt.“',
+    author: 'Mandant (anonymisiert)',
   },
   {
     quote:
-      '„Stil und Technik sind perfekt verbunden – die Brille fühlt sich an wie maßgeschneidert.“',
-    author: 'Kunde, Striesen',
+      '„Die Strategie ist nachvollziehbar – wir wissen jetzt, warum wir was tun.“',
+    author: 'Mandantin (anonymisiert)',
   },
   {
     quote:
-      '„Vom Sehtest bis zur Abholung: alles strukturiert, herzlich und ohne Hektik.“',
-    author: 'Kundin, Altstadt',
+      '„Ruhig, klar, strukturiert. Genau die Begleitung, die wir gesucht haben.“',
+    author: 'Mandant (anonymisiert)',
   },
 ];
 
-const offers = [
+const serviceOffers = [
   {
-    title: 'Brillenberatung mit Stilprofil',
-    text: 'Gesichtsform, Blickachsen, Material und Alltag – wir kuratieren Ihre perfekte Linie.',
+    title: 'Quartals-Update',
+    text: 'Ein kompaktes Gespräch mit Überblick über Märkte, Risiken und Chancen.',
   },
   {
-    title: 'Kontaktlinsen-Startpaket',
-    text: 'Einweisung, Hygieneplan und Follow-up – damit Sie sicher starten und bleiben.',
+    title: 'Familien- & Generationenrunde',
+    text: 'Gemeinsames Gespräch zu Werten, Rollen und langfristigen Zielen.',
   },
   {
-    title: 'Sehanalyse-Upgrade',
-    text: '3D-Refraktion plus Kontrasttests für detailreiches Sehen in jeder Situation.',
+    title: 'Krisen-Check',
+    text: 'Überprüfung der Liquidität und Stabilität bei Marktstress.',
   },
 ];
 
 export default function App() {
   const [navOpen, setNavOpen] = useState(false);
-  const [mapLoaded, setMapLoaded] = useState(false);
 
   const handleNavClick = () => {
     setNavOpen(false);
@@ -122,7 +129,7 @@ export default function App() {
     <div className="page">
       <header className="header">
         <div className="container header-inner">
-          <div className="logo">Optik Schorcht</div>
+          <div className="logo">Mustername Vermögensberatung</div>
           <button
             className="nav-toggle"
             type="button"
@@ -145,13 +152,8 @@ export default function App() {
               ))}
             </div>
             <div className="nav-actions">
-              <a
-                className="nav-cta btn btn-primary"
-                href="https://www.sehen.de/augenoptiker-suche/dresden/01067/augenoptik-schorcht/terminanfrage/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Termin
+              <a className="nav-cta btn btn-primary" href="mailto:kontakt@mustermann-beratung.de">
+                Erstgespräch
               </a>
             </div>
           </nav>
@@ -163,20 +165,15 @@ export default function App() {
           <div className="hero-glow" aria-hidden="true" />
           <div className="container hero-grid">
             <div className="hero-content">
-              <span className="badge">Design trifft Sehkomfort.</span>
-              <h1>Optik, die wie ein Atelier denkt.</h1>
+              <span className="badge">Vermögen mit Ruhe führen.</span>
+              <h1>Strategie, die schützt und Möglichkeiten schafft.</h1>
               <p>
-                Kuratierte Kollektionen, ehrliche Beratung und eine 3D-Sehanalyse, die jedes Detail
-                sichtbar macht. Für Brillen, die Sie täglich gern tragen.
+                Klar strukturierte Vermögensberatung für Menschen, die Verantwortung tragen. Ohne
+                Produktdruck, mit Substanz und langfristiger Perspektive.
               </p>
               <div className="button-row">
-                <a
-                  className="btn btn-primary"
-                  href="https://www.sehen.de/augenoptiker-suche/dresden/01067/augenoptik-schorcht/terminanfrage/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Termin vereinbaren
+                <a className="btn btn-primary" href="mailto:kontakt@mustermann-beratung.de">
+                  Erstgespräch vereinbaren
                 </a>
                 <a className="btn btn-secondary" href="#kontakt">
                   Kontakt aufnehmen
@@ -184,79 +181,91 @@ export default function App() {
               </div>
               <div className="hero-metrics">
                 <div>
-                  <strong>30+ Jahre</strong>
-                  <span>Optik-Kompetenz</span>
+                  <strong>Unabhängig</strong>
+                  <span>Honorarorientiert</span>
                 </div>
                 <div>
-                  <strong>3D-Analyse</strong>
-                  <span>Visionix 120</span>
+                  <strong>Strukturiert</strong>
+                  <span>Klare Leitplanken</span>
                 </div>
                 <div>
-                  <strong>Design-Fokus</strong>
-                  <span>Kuratiert statt beliebig</span>
+                  <strong>Langfristig</strong>
+                  <span>Begleitung statt Aktionismus</span>
                 </div>
               </div>
             </div>
             <div className="hero-media">
-              <div className="photo-panel photo-panel--hero" role="img" aria-label="Premium-Atelier mit warmem Licht">
-                <div className="photo-panel__label">Atelier-Atmosphäre</div>
-                <div className="photo-panel__title">Licht. Ruhe. Präzision.</div>
+              <div
+                className="photo-panel photo-panel--hero"
+                role="img"
+                aria-label="Ruhiger Besprechungsraum mit Notizen und Licht"
+              >
+                <div className="photo-panel__label">Diskretion & Fokus</div>
+                <div className="photo-panel__title">Klarheit schafft Vertrauen.</div>
                 <div className="photo-panel__meta">
-                  <span>Kuratiertes Interior</span>
-                  <span>High-End Sehtest</span>
+                  <span>Vertrauliche Gespräche</span>
+                  <span>Durchdachte Strategien</span>
                 </div>
               </div>
               <div className="photo-stack">
-                <div className="photo-panel photo-panel--detail" role="img" aria-label="Detailaufnahme einer Brille" />
-                <div className="photo-panel photo-panel--portrait" role="img" aria-label="Beratung im Fokus" />
+                <div
+                  className="photo-panel photo-panel--detail"
+                  role="img"
+                  aria-label="Detailaufnahme von Unterlagen"
+                />
+                <div
+                  className="photo-panel photo-panel--portrait"
+                  role="img"
+                  aria-label="Beratungssituation am Tisch"
+                />
               </div>
             </div>
           </div>
         </section>
 
-        <section id="kollektionen" className="section section--collections">
+        <section id="leistungen" className="section section--collections">
           <div className="container">
             <div className="section-header">
               <div>
-                <h2 className="section-title">Kollektionen mit Charakter.</h2>
+                <h2 className="section-title">Leistungen mit Klarheit.</h2>
                 <p className="section-subtitle">
-                  Inspiriert von internationalen Designhäusern – reduziert, hochwertig und exakt auf
-                  Ihre Linienführung abgestimmt.
+                  Strukturierte Beratung von der Zieldefinition bis zur Portfolioarchitektur – immer
+                  nachvollziehbar dokumentiert.
                 </p>
               </div>
               <div className="section-visual section-visual--orbit" aria-hidden="true" />
             </div>
             <div className="collection-grid">
-              {collectionHighlights.map((item) => (
+              {serviceHighlights.map((item) => (
                 <article key={item.title} className="card card--glass">
                   <h3>{item.title}</h3>
                   <p>{item.text}</p>
                 </article>
               ))}
             </div>
-            <div className="pill-row" aria-label="Markenfokus">
-              <span>Design-orientiert</span>
-              <span>Handverlesene Hersteller</span>
-              <span>Made in EU</span>
-              <span>Premium-Gläser</span>
+            <div className="pill-row" aria-label="Beratungsprinzipien">
+              <span>Transparenz</span>
+              <span>Verantwortung</span>
+              <span>Familienorientiert</span>
+              <span>Ruhige Umsetzung</span>
             </div>
           </div>
         </section>
 
-        <section id="leistungen" className="section section--lens">
+        <section id="strategie" className="section section--lens">
           <div className="container">
             <div className="section-header">
               <div>
-                <h2 className="section-title">Ihr Sehen. Ihr Stil. Ihre Lösung.</h2>
+                <h2 className="section-title">Strategie, bevor Produkte kommen.</h2>
                 <p className="section-subtitle">
-                  Brillen, Kontaktlinsen und präzise Sehanalyse – individuell abgestimmt und mit
-                  ruhiger Beratung. Sie wählen. Ich berate.
+                  Erst Struktur und Leitplanken, dann Entscheidungen. So entsteht Stabilität, die
+                  Sie jederzeit nachvollziehen können.
                 </p>
               </div>
               <div className="section-visual section-visual--orbit" aria-hidden="true" />
             </div>
             <div className="cards cards--wide">
-              {serviceHighlights.map((item) => (
+              {strategyPillars.map((item) => (
                 <article key={item.title} className="card">
                   <h3>{item.title}</h3>
                   <p>{item.text}</p>
@@ -266,50 +275,48 @@ export default function App() {
           </div>
         </section>
 
-        <section id="atelier" className="section section--atelier">
+        <section id="struktur" className="section section--atelier">
           <div className="container">
             <div className="split">
               <div>
-                <span className="badge badge--soft">Atelier</span>
-                <h2 className="section-title">Ein Raum, der entschleunigt.</h2>
+                <span className="badge badge--soft">Vermögensstruktur</span>
+                <h2 className="section-title">Ordnung, die Generationen trägt.</h2>
                 <p className="section-subtitle">
-                  Das Atelier ist bewusst kuratiert: matte Materialien, warme Texturen und
-                  atmosphärisches Licht sorgen für ein echtes Ankommen.
+                  Vermögen wächst nicht nur im Depot. Struktur, Nachfolge und klare Zuständigkeiten
+                  sind der stabile Rahmen.
                 </p>
                 <div className="list-grid">
-                  <div>
-                    <strong>Intime Beratung</strong>
-                    <p className="small">Klare Abläufe, keine Hektik, alles im Blick.</p>
-                  </div>
-                  <div>
-                    <strong>Materialwelt</strong>
-                    <p className="small">Fassungen, die haptisch überzeugen und langlebig sind.</p>
-                  </div>
-                  <div>
-                    <strong>Lichtplanung</strong>
-                    <p className="small">Farbtemperaturen, die reale Wahrnehmung unterstützen.</p>
-                  </div>
+                  {structureHighlights.map((item) => (
+                    <div key={item.title}>
+                      <strong>{item.title}</strong>
+                      <p className="small">{item.text}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
-              <div className="photo-panel photo-panel--atelier" role="img" aria-label="Innenraum mit ruhigem Licht" />
+              <div
+                className="photo-panel photo-panel--atelier"
+                role="img"
+                aria-label="Besprechungsraum mit übersichtlichen Unterlagen"
+              />
             </div>
           </div>
         </section>
 
-        <section id="ablauf" className="section section--process">
+        <section id="prozess" className="section section--process">
           <div className="container">
             <div className="section-header">
               <div>
-                <h2 className="section-title">So läuft Ihr Termin ab.</h2>
+                <h2 className="section-title">So arbeiten wir zusammen.</h2>
                 <p className="section-subtitle">
-                  Klar strukturiert, angenehm ruhig und mit messbarer Präzision – damit jedes Detail
-                  stimmt.
+                  Planbar, transparent und mit klaren Schritten – damit Sie jederzeit den Überblick
+                  behalten.
                 </p>
               </div>
               <div className="section-visual section-visual--ripple" aria-hidden="true" />
             </div>
             <div className="process-grid">
-              {experienceSteps.map((step, index) => (
+              {processSteps.map((step, index) => (
                 <article key={step.title} className="process-card">
                   <div className="process-card__index">{index + 1}</div>
                   <div>
@@ -327,10 +334,10 @@ export default function App() {
           <div className="container">
             <div className="section-header">
               <div>
-                <h2 className="section-title">Vertrauen entsteht im Detail.</h2>
+                <h2 className="section-title">Vertrauen entsteht durch Transparenz.</h2>
                 <p className="section-subtitle">
-                  Präzise Messung, nachvollziehbare Empfehlung und Qualitätsprodukte, die lange
-                  begleiten.
+                  Entscheidungen brauchen Ruhe, Daten und Klarheit. Genau dafür ist der Prozess
+                  geschaffen.
                 </p>
               </div>
               <div className="section-visual section-visual--grid" aria-hidden="true" />
@@ -343,10 +350,10 @@ export default function App() {
                 </div>
               ))}
               <div className="trust-card">
-                <h3>Premium-Qualität, die man sieht.</h3>
+                <h3>Diskretion & Verantwortung.</h3>
                 <p>
-                  SEIKO-Markengläser mit Verträglichkeitsgarantie sowie sorgfältig ausgewählte
-                  Manufakturfassungen – für sichtbare Perfektion.
+                  Vermögensberatung ist Vertrauenssache. Daher steht Vertraulichkeit in jeder Phase
+                  im Mittelpunkt.
                 </p>
               </div>
             </div>
@@ -361,20 +368,20 @@ export default function App() {
           </div>
         </section>
 
-        <section id="angebote" className="section section--offers">
+        <section id="insights" className="section section--offers">
           <div className="container">
             <div className="section-header">
               <div>
-                <h2 className="section-title">Angebote, die Sinn ergeben.</h2>
+                <h2 className="section-title">Service, der Orientierung gibt.</h2>
                 <p className="section-subtitle">
-                  Klar kuratierte Leistungen, die Ihnen Orientierung geben und hochwertige Ergebnisse
-                  sichern.
+                  Regelmäßige Updates und klare Formate, damit Entscheidungen nicht aufgeschoben
+                  werden müssen.
                 </p>
               </div>
               <div className="section-visual section-visual--ripple" aria-hidden="true" />
             </div>
             <div className="cards">
-              {offers.map((offer) => (
+              {serviceOffers.map((offer) => (
                 <article key={offer.title} className="card card--soft">
                   <h3>{offer.title}</h3>
                   <p>{offer.text}</p>
@@ -383,19 +390,13 @@ export default function App() {
             </div>
             <div className="offer-cta">
               <div>
-                <h3>Termin? Wir nehmen uns Zeit.</h3>
+                <h3>Bereit für Klarheit?</h3>
                 <p className="small">
-                  ZEIT nehmen, ZEIT haben – für Ihre Augen und Ihre Wünsche. Ich will, dass Sie Sehen
-                  erleben.
+                  Ein Erstgespräch gibt Ihnen eine strukturierte Einordnung – ohne Verpflichtung.
                 </p>
               </div>
-              <a
-                className="btn btn-primary"
-                href="https://www.sehen.de/augenoptiker-suche/dresden/01067/augenoptik-schorcht/terminanfrage/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Termin anfragen
+              <a className="btn btn-primary" href="mailto:kontakt@mustermann-beratung.de">
+                Erstgespräch anfragen
               </a>
             </div>
           </div>
@@ -405,49 +406,36 @@ export default function App() {
           <div className="container">
             <div className="section-header">
               <div>
-                <h2 className="section-title">Kontakt &amp; Öffnungszeiten</h2>
+                <h2 className="section-title">Kontakt &amp; Erstgespräch</h2>
                 <p className="section-subtitle">
-                  Zentral in Dresden, leicht erreichbar, mit viel Zeit für Sie.
+                  Für vertrauliche Gespräche reserviere ich feste Zeitfenster – gerne nach
+                  Vereinbarung.
                 </p>
               </div>
               <div className="section-visual section-visual--pin" aria-hidden="true" />
             </div>
             <div className="contact-grid">
               <div className="contact-card">
-                <p><strong>Optik Schorcht</strong></p>
-                <p>Inhaber: Joachim Skorupa</p>
-                <p>Kleine Brüdergasse 1<br />01067 Dresden</p>
+                <p><strong>Mustername Vermögensberatung</strong></p>
+                <p>Inhaber: Max Mustermann (Platzhalter)</p>
+                <p>Musterstraße 12<br />10115 Berlin</p>
                 <p>
-                  Telefon: <a href="tel:+493514901510">0351 4901510</a><br />
-                  E-Mail: <a href="mailto:optik.schorcht@euronet-server.com">optik.schorcht@euronet-server.com</a>
+                  Telefon: <a href="tel:+493011122233">030 111 222 33</a><br />
+                  E-Mail: <a href="mailto:kontakt@mustermann-beratung.de">kontakt@mustermann-beratung.de</a>
                 </p>
-                <p><strong>Öffnungszeiten</strong></p>
-                <p>Mo / Di / Do / Fr: 09:00 – 18:00</p>
-                <p>Mittwoch: geschlossen</p>
-                <p>Samstag: nach Vereinbarung</p>
-                <p className="small">Zeit nehmen. Zeit haben. Für Ihre Augen. Für Ihre Wünsche.</p>
+                <p><strong>Verfügbarkeit</strong></p>
+                <p>Mo – Fr: 09:00 – 18:00 (nur nach Termin)</p>
+                <p className="small">
+                  Hinweis: Kontaktdaten dienen als Platzhalter und werden im Projektfinale ersetzt.
+                </p>
               </div>
-              <div className="map-shell">
-                {!mapLoaded ? (
-                  <div className="map-placeholder">
-                    <p><strong>Karte laden</strong></p>
-                    <p className="small">
-                      Zum Schutz Ihrer Daten wird die Karte erst nach Klick geladen. Es werden dabei
-                      Inhalte von Drittanbietern abgerufen.
-                    </p>
-                    <button className="btn btn-primary" type="button" onClick={() => setMapLoaded(true)}>
-                      Karte laden
-                    </button>
-                  </div>
-                ) : (
-                  <iframe
-                    className="map-frame"
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    src={mapSrc}
-                    title="Anfahrt"
-                  />
-                )}
+              <div className="contact-card contact-card--accent">
+                <h3>Diskretion garantiert.</h3>
+                <p>
+                  Ihre Angaben werden ausschließlich für die Kontaktaufnahme genutzt. Keine
+                  Weitergabe, keine Newsletter, keine Tracking-Tools.
+                </p>
+                <p className="small">Alternativ: Schreiben Sie uns direkt eine E-Mail.</p>
               </div>
             </div>
           </div>
@@ -457,12 +445,9 @@ export default function App() {
       <footer className="footer">
         <div className="container">
           <div className="footer-links">
-            <span>&copy; Optik Schorcht</span>
+            <span>&copy; 2024 Mustername Vermögensberatung</span>
             <a href="/impressum.html">Impressum</a>
             <a href="/datenschutz.html">Datenschutz</a>
-            <a href="https://www.1xo.de/" target="_blank" rel="noreferrer">
-              ZVA / 1XO
-            </a>
           </div>
         </div>
       </footer>
